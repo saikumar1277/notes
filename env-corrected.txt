@@ -1,0 +1,4 @@
+DATABASE_URL="postgresql://postgres:wZfC1647aNNnK2M7@db.ldkttgjtwdmuvourtlqd.supabase.co:5432/postgres?pgbouncer=true&connection_limit=1&pool_timeout=20"
+DIRECT_URL="postgresql://postgres:wZfC1647aNNnK2M7@db.ldkttgjtwdmuvourtlqd.supabase.co:5432/postgres"
+NEXT_PUBLIC_SUPABASE_URL=https://ldkttgjtwdmuvourtlqd.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxka3R0Z2p0d2RtdXZvdXJ0bHFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1MTQ1MTYsImV4cCI6MjA2NjA5MDUxNn0.4aoiUNNPsFVQs6cYY9LQ5lgVdVcm-tcZokNk36Gf7AE 
