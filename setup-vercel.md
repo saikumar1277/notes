@@ -10,14 +10,18 @@ To fix the database connection error, you need to configure the following enviro
 
 ### 2. Add Environment Variables
 
+**Important**: Add these environment variables directly in the Vercel dashboard, NOT in your `vercel.json` file.
+
 Add these environment variables:
 
 **DATABASE_URL**
+- Name: `DATABASE_URL`
 - Value: Your Supabase connection string
 - Format: `postgresql://username:password@host:port/database?pgbouncer=true&connection_limit=1&pool_timeout=20`
 - Environment: Production, Preview, Development
 
 **DIRECT_URL** (Optional but recommended)
+- Name: `DIRECT_URL`
 - Value: Your direct Supabase connection string (without pgbouncer)
 - Format: `postgresql://username:password@host:port/database`
 - Environment: Production, Preview, Development
@@ -36,13 +40,25 @@ postgresql://postgres:[YOUR-PASSWORD]@db.ldkttgjtwdmuvourtlqd.supabase.co:5432/p
 postgresql://postgres:[YOUR-PASSWORD]@db.ldkttgjtwdmuvourtlqd.supabase.co:5432/postgres
 ```
 
-### 4. Redeploy
+### 4. Steps to Add Environment Variables in Vercel
+
+1. Go to your Vercel project dashboard
+2. Click on "Settings" tab
+3. Click on "Environment Variables" in the left sidebar
+4. Click "Add New" button
+5. Enter the variable name (e.g., `DATABASE_URL`)
+6. Enter the variable value (your connection string)
+7. Select all environments (Production, Preview, Development)
+8. Click "Save"
+9. Repeat for `DIRECT_URL` if needed
+
+### 5. Redeploy
 After adding the environment variables:
 1. Go to Deployments tab
 2. Click "Redeploy" on your latest deployment
 3. Or push a new commit to trigger a new deployment
 
-### 5. Verify Connection
+### 6. Verify Connection
 You can test the database connection by visiting your deployed app and checking if the database operations work correctly.
 
 ## Troubleshooting
