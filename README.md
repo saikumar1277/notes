@@ -21,11 +21,23 @@ The interface combines design elements from various applications I've enjoyed us
 - **Delete** completed or outdated notes
 
 
-## Live Demo
+## Demo Video
+
+https://github.com/user-attachments/assets/8cdb32bc-c8e5-426b-968a-9bc560b1785d
 
 
 
 ## Screenshots
 
+<img width="1466" alt="DemoSS_2" src="https://github.com/user-attachments/assets/dff4c2ef-7527-46bb-9373-22bdf6f9784b" />
 
-## Demo Video
+
+<img width="1470" alt="DemoSS_1" src="https://github.com/user-attachments/assets/65396962-a95d-4308-aa53-1b8ef6dbdef0" />
+
+
+<img width="1468" alt="DemoSS_3" src="https://github.com/user-attachments/assets/ecae50ef-88ee-4d2f-8f8b-9726a9dd4a46" />
+
+
+
+
+
