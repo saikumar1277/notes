@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { createClient } from '@/utils/supabase/client';
 import { Button } from '@/components/ui/button';
 
@@ -53,7 +53,7 @@ export default function SupabaseNotes() {
   const weekDates = getCurrentWeekDates();
 
   // Fetch notes from Supabase
-  const fetchNotes = async () => {
+  const fetchNotes = useCallback(async () => {
     try {
       const { data, error } = await supabase
         .from('notes')
@@ -69,13 +69,13 @@ export default function SupabaseNotes() {
     } catch (error) {
       console.error('Error fetching notes:', error);
     }
-  };
+  }, [supabase]);
 
   // Create a new note
   const createNote = async (title: string, content: string, day?: string, month?: string, year?: string) => {
     setIsLoading(true);
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('notes')
         .insert([
           {
@@ -204,7 +204,7 @@ export default function SupabaseNotes() {
 
   useEffect(() => {
     fetchNotes();
-  }, []);
+  }, [fetchNotes]);
 
   return (
     <div className="max-h-screen bg-white">
