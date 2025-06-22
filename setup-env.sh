@@ -1,0 +1,48 @@
+#!/bin/bash
+
+echo "🚀 WeekNotes Deployment Environment Setup"
+echo "=========================================="
+echo ""
+
+echo "📋 Current Supabase Project Details:"
+echo "Project URL: https://ldkttgjtwdmuvourtlqd.supabase.co"
+echo "Database Host: db.ldkttgjtwdmuvourtlqd.supabase.co:5432"
+echo ""
+
+echo "🔧 Environment Variables to set in Vercel:"
+echo ""
+echo "For Prisma + Supabase setup:"
+echo "DATABASE_URL=postgresql://postgres:[YOUR-PASSWORD]@db.ldkttgjtwdmuvourtlqd.supabase.co:5432/postgres?pgbouncer=true"
+echo "DIRECT_URL=postgresql://postgres:[YOUR-PASSWORD]@db.ldkttgjtwdmuvourtlqd.supabase.co:5432/postgres"
+echo ""
+echo "For Supabase client:"
+echo "NEXT_PUBLIC_SUPABASE_URL=https://ldkttgjtwdmuvourtlqd.supabase.co"
+echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=[YOUR-ANON-KEY]"
+echo ""
+
+echo "📝 Steps to fix deployment:"
+echo "1. Go to your Vercel dashboard"
+echo "2. Navigate to Project Settings > Environment Variables"
+echo "3. Add the variables above (replace [YOUR-PASSWORD] and [YOUR-ANON-KEY])"
+echo "4. Redeploy your application"
+echo ""
+
+echo "🔍 To get your credentials:"
+echo "1. Go to https://supabase.com/dashboard"
+echo "2. Select your project"
+echo "3. Go to Settings > Database for password"
+echo "4. Go to Settings > API for anon key"
+echo ""
+
+echo "✅ Quick fix for immediate deployment:"
+echo "Add these exact values to Vercel (using the password from your error):"
+echo "DATABASE_URL=postgresql://postgres:wZfC1647aNNnK2M7@db.ldkttgjtwdmuvourtlqd.supabase.co:5432/postgres?pgbouncer=true"
+echo "DIRECT_URL=postgresql://postgres:wZfC1647aNNnK2M7@db.ldkttgjtwdmuvourtlqd.supabase.co:5432/postgres"
+echo ""
+
+echo "🎯 Alternative: Switch to Supabase-only"
+echo "If you want to use only Supabase (no Prisma):"
+echo "1. Copy src/app/supabase-notes/page.tsx to src/app/page.tsx"
+echo "2. Add only the NEXT_PUBLIC_SUPABASE_* variables to Vercel"
+echo "3. Update package.json build script to remove 'prisma generate &&'"
+echo "" 
